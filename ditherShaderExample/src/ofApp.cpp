@@ -6,7 +6,7 @@ void ofApp::setup(){
     
     shader.load("shaders/dither_ordered_bayer_4x4");
 
-    fbo.allocate(image.width, image.height, GL_RGBA);
+    fbo.allocate(image.getWidth(), image.getHeight(), GL_RGBA);
     fbo.getTextureReference().setTextureMinMagFilter(GL_NEAREST, GL_NEAREST);
 }
 
