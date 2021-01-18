@@ -2,12 +2,12 @@
 
 //--------------------------------------------------------------
 void ofApp::setup(){
-    image.loadImage("sutu_512x512.jpg");
+    image.load("sutu_512x512.jpg");
     
     shader.load("shaders/dither_ordered_bayer_4x4");
 
     fbo.allocate(image.getWidth(), image.getHeight(), GL_RGBA);
-    fbo.getTextureReference().setTextureMinMagFilter(GL_NEAREST, GL_NEAREST);
+    fbo.getTexture().setTextureMinMagFilter(GL_NEAREST, GL_NEAREST);
 }
 
 //--------------------------------------------------------------
